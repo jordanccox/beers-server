@@ -11,6 +11,10 @@ const beers = [
 router.param('beer', function(req, res, next, id) {
   req.beer = beers.find(beer => beer.id === id);
 
+  if (!req.beer) {
+    req.beer = {};
+    req.beer.name = "No beer found :("
+  }
   next();
 });
 
