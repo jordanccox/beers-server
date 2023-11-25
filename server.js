@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var beers = require('./routes/beers')
-var index = require('./routes/index')
+var beers = require('./routes/beers');
+var index = require('./routes/index');
 
 var app = express();
 
